@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.project.natnaelalemayehuweatherforcastapi.views.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_weatherListFragment"
+            app:destination="@id/weatherListFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/weatherListFragment"
+        android:name="com.project.natnaelalemayehuweatherforcastapi.views.fragments.WeatherListFragment"
+        android:label="fragment_weather_list"
+        tools:layout="@layout/fragment_weather_list">
+
+        <action
+            android:id="@+id/action_weatherListFragment_to_weatherDetailsFragment"
+            app:destination="@id/weatherDetailsFragment"/>
+
+        <action
+            android:id="@+id/action_weatherListFragment_to_homeFragment"
+            app:destination="@id/homeFragment"/>
+
+        <argument
+            android:name="city"
+            app:argType="string"
+            android:defaultValue="Atlanta"/>
+
+        <argument
+            android:name="unit"
+            app:argType="string"
+            android:defaultValue="imperial"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/weatherDetailsFragment"
+        android:name="com.project.natnaelalemayehuweatherforcastapi.views.fragments.WeatherDetailsFragment"
+        android:label="fragment_weather_details"
+        tools:layout="@layout/fragment_weather_details">
+
+        <action
+            android:id="@+id/action_weatherDetailsFragment_to_weatherListFragment"
+            app:destination="@id/weatherListFragment"/>
+
+        <argument
+            android:name="weather_item"
+            app:argType="com.project.natnaelalemayehuweatherforcastapi.models.WeatherData"
+            app:nullable="true"/>
+
+    </fragment>
+</navigation>

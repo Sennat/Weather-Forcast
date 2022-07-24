@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Weather Forecast</string>
+    <string name="city_name">City Name</string>
+    <string name="lookup">Lookup</string>
+    <string name="celsius">Celsius</string>
+    <string name="fahrenheit">Fahrenheit</string>
+    <string name="fahrenheit_celsius">Fahrenheit/Celsius</string>
+    <string name="current_city"></string>
+    <string name="unit"></string>
+    <string name="loading">Loading weather data ...</string>
+</resources>
