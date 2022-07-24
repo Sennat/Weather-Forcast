@@ -43,16 +43,16 @@ class HomeFragment : ViewModelFragment() {
      */
     private fun toggleUnits() {
         binding.btnSwitch.setOnCheckedChangeListener { _, isChecked ->
-            binding.btnSwitch.getThumbDrawable().setTint(Color.argb(253, 253, 153, 0))
+            binding.btnSwitch.getThumbDrawable().setTint(Color.argb(253, 128,128,128))
             if (isChecked) {
                 binding.txtUnit.apply {
                     binding.txtUnit.text = "Celsius"
-                    binding.txtUnit.setTextColor(Color.RED)
+                    binding.txtUnit.setTextColor(Color.rgb(128,0,0))
                 }
             } else {
                 binding.txtUnit.apply {
                     binding.txtUnit.text = "Fahrenheit"
-                    binding.txtUnit.setTextColor(Color.RED)
+                    binding.txtUnit.setTextColor(Color.rgb(128,0,0))
                 }
             }
                 /*binding.txtUnit.apply {

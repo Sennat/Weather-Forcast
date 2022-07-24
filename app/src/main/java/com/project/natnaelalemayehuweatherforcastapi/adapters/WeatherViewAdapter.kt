@@ -29,11 +29,11 @@ class WeatherViewAdapter(private val itemList: MutableList<WeatherData> = mutabl
                 val date = LocalDate.parse(item.dt_txt, firstApiFormat)
                 txtDate.text =  date.toString()
                 txtCity.text = binding.root.resources.getString(R.string.current_city)
-                txtFeel.text = "Feel Like: ${item.main.feels_like.toDouble().toString()} ${binding.root.resources.getString(R.string.unit)}"
-                txtTemperature.text = "${item.main.temp.toDouble().toString()} ${binding.root.resources.getString(R.string.unit)}"
-                txtCloud.text = "Cloudiness: ${item.clouds.all.toInt().toString()}%"
-                txtWind.text = "Wind Speed: ${item.wind.speed.toDouble().toString()}m/s"
-                txtHumidity .text = "Humidity: ${item.main.humidity.toInt().toString()}%"
+                txtFeel.text = "Feel Like: ${item.main.feels_like.toString()} ${binding.root.resources.getString(R.string.unit)}"
+                txtTemperature.text = "${item.main.temp.toString()} ${binding.root.resources.getString(R.string.unit)}"
+                txtCloud.text = "Cloudiness: ${item.clouds.all.toString()}%"
+                txtWind.text = "Wind: ${item.wind.speed.toString()}m/s"
+                txtHumidity .text = "Humidity: ${item.main.humidity.toString()}%"
 
                 binding.root.setOnClickListener {
                     openDetails(item)

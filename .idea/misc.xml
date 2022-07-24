@@ -5,11 +5,11 @@
       <map>
         <entry key="app/src/main/res/drawable/bottom_border.xml" value="0.257" />
         <entry key="app/src/main/res/drawable/top_border.xml" value="0.257" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_weather_details.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_weather_list.xml" value="0.335" />
-        <entry key="app/src/main/res/layout/weather_list_item.xml" value="0.22178988326848248" />
+        <entry key="app/src/main/res/layout/fragment_weather_list.xml" value="0.18012422360248448" />
+        <entry key="app/src/main/res/layout/weather_list_item.xml" value="0.1" />
       </map>
     </option>
   </component>
