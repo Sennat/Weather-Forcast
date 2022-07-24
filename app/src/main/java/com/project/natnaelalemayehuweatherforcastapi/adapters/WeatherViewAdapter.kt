@@ -32,7 +32,7 @@ class WeatherViewAdapter(private val itemList: MutableList<WeatherData> = mutabl
                 txtFeel.text = "Feel Like: ${item.main.feels_like.toString()} ${binding.root.resources.getString(R.string.unit)}"
                 txtTemperature.text = "${item.main.temp.toString()} ${binding.root.resources.getString(R.string.unit)}"
                 txtCloud.text = "Cloudiness: ${item.clouds.all.toString()}%"
-                txtWind.text = "Wind: ${item.wind.speed.toString()}m/s"
+                txtWind.text = "Wind: ${item.wind.speed.toString()} m/s"
                 txtHumidity .text = "Humidity: ${item.main.humidity.toString()}%"
 
                 binding.root.setOnClickListener {

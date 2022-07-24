@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#8E808080"
+    android:background="#D3D3D3"
     android:layout_margin="10dp"
     app:cornerRadius="25dp"
     android:weightSum="2"
@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
         android:text="@string/fahrenheit_celsius"
-        android:textSize="40sp"
+        android:textSize="24sp"
         android:textColor="@color/blue_black_dark"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,6 +37,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_unit"/>
 
+    <TextView
+        android:id="@+id/txt_default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="Default City Paris"
+        android:textSize="26sp"
+        android:textColor="#610DD9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/city_input" />
+
     <EditText
         android:id="@+id/city_input"
         android:layout_width="match_parent"
@@ -48,20 +60,24 @@
         android:textColor="@color/black"
         android:textSize="24sp"
         android:weightSum="2"
+        android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_switch"
-        android:inputType="text" />
+        app:layout_constraintTop_toBottomOf="@id/btn_switch"/>
 
     <Button
         android:id="@+id/btn_lookup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/transparent"
-        android:textSize="24sp"
-        android:text="@string/lookup"
-        android:textColor="@color/black"
+        android:backgroundTint="@color/fb"
+        android:textColor="@color/bg_color"
+        android:paddingHorizontal="50dp"
+        android:paddingVertical="12dp"
         android:textAlignment="center"
+        android:text="@string/lookup"
+        android:textSize="24sp"
+        android:elevation="40dp"
+        app:cornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/city_input"/>

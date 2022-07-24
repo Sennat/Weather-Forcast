@@ -1,5 +1,6 @@
 package com.project.natnaelalemayehuweatherforcastapi.views.fragments
 
+import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -54,10 +55,25 @@ class WeatherDetailsFragment : ViewModelFragment() {
                         txtMax.text = "Max: ${args.weatherItem?.main?.temp_max.toString()} ${binding.root.resources.getString(R.string.unit)}"
                         txtWindSpeed.text ="${args.weatherItem?.wind?.speed?.toInt().toString()}m/s"
                         txtHumidity.text = "${args.weatherItem?.main?.humidity.toString()}%"
-                        txtCloud.text = args.weatherItem?.clouds?.all?.toInt().toString()
+                        txtCloud.text = "${args.weatherItem?.clouds?.all?.toInt().toString()}%"
+                        setFontSize()
+                        cloud.setText(R.string.cloudiness)
+                        wind.setText(R.string.wind)
+                        humidity.setText(R.string.humidity)
+                        loading.visibility = View.GONE
+                        txtLoading.visibility = View.GONE
                     }
                 }
             }
         }
+    }
+
+    private fun setFontSize() {
+        binding.txtTempFeel.setTextColor(Color.rgb(128,128,0))
+        binding.txtMin.setTextColor(Color.rgb(128,128,0))
+        binding.txtMax.setTextColor(Color.rgb(128,128,0))
+        binding.txtCloud.setTextColor(Color.rgb(139,69,19))
+        binding.txtWindSpeed.setTextColor(Color.rgb(139,69,19))
+        binding.txtHumidity.setTextColor(Color.rgb(139,69,19))
     }
 }

@@ -8,4 +8,7 @@
     <string name="current_city"></string>
     <string name="unit"></string>
     <string name="loading">Loading weather data ...</string>
+    <string name="cloudiness">Cloudiness</string>
+    <string name="humidity">Humidity</string>
+    <string name="wind">Wind</string>
 </resources>

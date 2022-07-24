@@ -64,10 +64,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:textAlignment="textStart"
-        android:layout_marginVertical="20dp"
         android:textColor="@color/fb"
-        android:textSize="24sp"
-        tools:text="Cloudiness"
+        android:textSize="20sp"
+        tools:text="@string/cloudiness"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txt_temperature"/>
 
@@ -78,7 +77,7 @@
         android:layout_marginStart="30dp"
         android:textAlignment="textStart"
         android:textColor="@color/fb"
-        android:textSize="20sp"
+        android:textSize="30sp"
         tools:text="Cloud"
         app:layout_constraintStart_toEndOf="@id/cloud"
         app:layout_constraintTop_toTopOf="@id/cloud" />
@@ -88,12 +87,12 @@
         android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:textAlignment="textStart"
-        android:layout_marginVertical="20dp"
+        android:layout_marginVertical="10dp"
         android:textColor="@color/fb"
-        android:textSize="24sp"
-        tools:text="Wind"
+        android:textSize="20sp"
+        tools:text="@string/wind"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txt_cloud"
+        app:layout_constraintTop_toBottomOf="@id/cloud"
         app:layout_constraintStart_toEndOf="@id/txt_wind_speed"/>
 
     <TextView
@@ -103,7 +102,7 @@
         android:layout_marginStart="30dp"
         android:textAlignment="textStart"
         android:textColor="@color/fb"
-        android:textSize="20sp"
+        android:textSize="30sp"
         tools:text="Speed"
         app:layout_constraintStart_toEndOf="@id/wind"
         app:layout_constraintTop_toTopOf="@id/wind"/>
@@ -113,11 +112,12 @@
         android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:textAlignment="textStart"
-        android:layout_marginVertical="20dp"
+        android:layout_marginVertical="10dp"
         android:textColor="@color/fb"
         android:textSize="24sp"
-        tools:text="Humidity"
+        tools:text="@string/humidity"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/txt_humidity"
         app:layout_constraintTop_toBottomOf="@id/wind"/>
 
     <TextView
@@ -127,7 +127,7 @@
         android:layout_marginStart="30dp"
         android:textAlignment="textStart"
         android:textColor="@color/fb"
-        android:textSize="20sp"
+        android:textSize="30sp"
         tools:text="Humidity"
         app:layout_constraintStart_toEndOf="@id/humidity"
         app:layout_constraintTop_toTopOf="@id/humidity"/>
