@@ -56,12 +56,12 @@ class WeatherDetailsFragment : ViewModelFragment() {
                         txtWindSpeed.text ="${args.weatherItem?.wind?.speed?.toInt().toString()}m/s"
                         txtHumidity.text = "${args.weatherItem?.main?.humidity.toString()}%"
                         txtCloud.text = "${args.weatherItem?.clouds?.all?.toInt().toString()}%"
-                        setFontSize()
                         cloud.setText(R.string.cloudiness)
                         wind.setText(R.string.wind)
                         humidity.setText(R.string.humidity)
                         loading.visibility = View.GONE
                         txtLoading.visibility = View.GONE
+                        setFontSize()
                     }
                 }
             }

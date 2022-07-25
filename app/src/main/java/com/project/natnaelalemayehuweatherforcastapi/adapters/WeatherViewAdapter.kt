@@ -1,9 +1,12 @@
 package com.project.natnaelalemayehuweatherforcastapi.adapters
 
+import android.graphics.Color
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.project.natnaelalemayehuweatherforcastapi.R
 import com.project.natnaelalemayehuweatherforcastapi.databinding.FragmentWeatherListBinding
 import com.project.natnaelalemayehuweatherforcastapi.databinding.WeatherListItemBinding
@@ -29,11 +32,17 @@ class WeatherViewAdapter(private val itemList: MutableList<WeatherData> = mutabl
                 val date = LocalDate.parse(item.dt_txt, firstApiFormat)
                 txtDate.text =  date.toString()
                 txtCity.text = binding.root.resources.getString(R.string.current_city)
-                txtFeel.text = "Feel Like: ${item.main.feels_like.toString()} ${binding.root.resources.getString(R.string.unit)}"
+                txtFeel.text = "Feel like: ${item.main.feels_like.toString()} ${binding.root.resources.getString(R.string.unit)}"
                 txtTemperature.text = "${item.main.temp.toString()} ${binding.root.resources.getString(R.string.unit)}"
-                txtCloud.text = "Cloudiness: ${item.clouds.all.toString()}%"
+                txtCloud.text = "${item.clouds.all.toString()}%"
                 txtWind.text = "Wind: ${item.wind.speed.toString()} m/s"
                 txtHumidity .text = "Humidity: ${item.main.humidity.toString()}%"
+
+                //imgCloud = binding.root.resources.getDrawable(R.drawable.ic_cloud)
+
+                Glide.with(imgCloud)
+                    .load(binding.root.resources.getDrawable(R.drawable.ic_cloud))
+                    .into(imgCloud)
 
                 binding.root.setOnClickListener {
                     openDetails(item)

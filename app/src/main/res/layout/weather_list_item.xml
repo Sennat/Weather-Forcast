@@ -13,8 +13,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
+        android:background="@drawable/sunset"
         android:elevation="40dp"
-        app:cornerRadius="15dp">
+        app:cornerRadius="10dp">
 
         <TextView
             android:id="@+id/txt_city"
@@ -31,48 +32,58 @@
 
         <TextView
             android:id="@+id/txt_temperature"
-            android:layout_width="150dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAlignment="center"
+            android:textAlignment="textStart"
             android:textColor="@color/fb"
-            android:textSize="40sp"
-            tools:text="0 °F"
-            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="55sp"
+            tools:text="0.0 °F"
             app:layout_constraintEnd_toStartOf="@id/txt_cloud"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/txt_city"/>
 
         <TextView
             android:id="@+id/txt_feel"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:textColor="@color/blue_black_dark"
+            android:textColor="@color/bg_color"
             android:textAlignment="center"
-            android:textSize="22sp"
-            android:text="Feel like"
+            android:textSize="24sp"
+            android:text="@string/feel_like"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/txt_temperature"/>
+
+        <ImageView
+            android:id="@+id/img_cloud"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_cloud"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toEndOf="@id/txt_temperature"
+            app:layout_constraintEnd_toStartOf="@id/txt_cloud"
+            app:layout_constraintTop_toTopOf="@id/txt_temperature"/>
 
         <TextView
             android:id="@+id/txt_cloud"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textAlignment="textStart"
-            android:textColor="@color/blue_black_dark"
-            android:layout_marginStart="20sp"
+            android:textColor="@color/bg_color"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:textSize="20sp"
             tools:text="Clouds"
-            app:layout_constraintStart_toEndOf="@id/txt_temperature"
+            app:layout_constraintStart_toEndOf="@id/img_cloud"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/txt_temperature"/>
+            app:layout_constraintTop_toTopOf="@id/img_cloud"/>
 
         <TextView
             android:id="@+id/txt_wind"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textAlignment="textStart"
-            android:textColor="@color/blue_black_dark"
-            android:layout_marginStart="20sp"
+            android:textColor="@color/bg_color"
+            android:layout_marginStart="20dp"
             android:textSize="20sp"
             tools:text="Wind"
             app:layout_constraintStart_toEndOf="@id/txt_temperature"
@@ -84,8 +95,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textAlignment="textStart"
-            android:textColor="@color/blue_black_dark"
-            android:layout_marginStart="20sp"
+            android:textColor="@color/bg_color"
+            android:layout_marginStart="20dp"
             android:textSize="20sp"
             tools:text="Humidity"
             app:layout_constraintStart_toEndOf="@id/txt_temperature"
@@ -97,7 +108,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:textColor="@color/black_effective"
+            android:textColor="@color/bg_color"
             android:layout_marginTop="20dp"
             android:textSize="20sp"
             tools:text="Date"

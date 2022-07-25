@@ -11,4 +11,5 @@
     <string name="cloudiness">Cloudiness</string>
     <string name="humidity">Humidity</string>
     <string name="wind">Wind</string>
+    <string name="feel_like">Feel like</string>
 </resources>

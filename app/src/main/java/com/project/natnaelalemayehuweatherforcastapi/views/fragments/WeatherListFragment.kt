@@ -65,7 +65,6 @@ class WeatherListFragment : ViewModelFragment() {
     private fun openDetails(weatherData: WeatherData) {
         viewModelFragment.setLoading()
         findNavController().navigate(WeatherListFragmentDirections.actionWeatherListFragmentToWeatherDetailsFragment(weatherData))
-
     }
 
 }
